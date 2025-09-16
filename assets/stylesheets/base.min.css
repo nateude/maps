@@ -1,0 +1,509 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure,  footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } table { border-collapse: collapse; border-spacing: 0; }
+
+/* fontawesome */
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/assets/stylesheets/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('/assets/stylesheets/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('/assets/stylesheets/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('/assets/stylesheets/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('/assets/stylesheets/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('/assets/stylesheets/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-linkedin:before {
+  content: "\f0e1";
+}
+.fa-github:before {
+  content: "\f09b";
+}
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+/*
+  Color Guide
+  ----
+    blue: #0C304F;
+    red: #521c0a;
+    grey: #ccc;
+    greylt: #F2F2F2;
+    greydk: #333;
+*/
+    .white {
+      color: #fff;
+    }
+    .blue {
+      color: #0C304F;
+    }
+    .blue-bg {
+      background-color: #0C304F;
+    }
+    .red: {
+      color #521c0a;
+    }
+    .red-bg: {
+      background-color #521c0a;
+    }
+    .grey {
+      color: #ccc;
+    }
+    .grey-bg {
+      background-color: #ccc;
+    }
+    .grey-lt {
+      color: #F2F2F2;
+    }
+    .grey-lt-bg {
+      background-color: #F2F2F2;
+    }
+    .grey-dk {
+      color: #333;
+    }
+    .grey-dk-bg {
+      background-color: #333;
+    }
+
+
+/* Globals */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+h1, h2, h3{
+  color: #0C304F;
+  font-size: 2em;
+  font-weight: 100;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+h1.white,
+h2.white,
+h3.white {
+  color: white;
+}
+
+.heading-1 {
+  font-size: 4em;
+  line-height: 1em;
+}
+.heading-2 {
+  font-size: 3em;
+}
+.heading-3 {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+p {
+  margin: 30px 0;
+}
+
+h1 + p,
+h2 + p,
+h3 + p {
+  margin: 5px 0 30px;
+}
+
+a {
+  color: #0C304F;
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: #521c0a;
+  text-decoration: underline;
+}
+
+em {
+  font-weight: 600;
+}
+
+/* Decorative */
+
+.divider {
+  display: inline-block;
+  width: 33.33%;
+  margin: 15px 0 30px;
+  border-bottom: 2px solid #F2F2F2;
+}
+.divider.blue {
+  border-color: #0C304F;
+}
+.divider.grey {
+  border-color: #ccc;
+}
+.divider.grey-dk {
+  border-color: #333;
+}
+/* Layouts */
+
+section {
+  min-height: 100px;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 680px;
+  padding: 30px 15px 60px;
+  overflow: hidden;
+}
+.container-wide{
+  width:100%;
+  max-width: 1200px;
+}
+.container-full{
+  width:100%;
+  max-width: 100%;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  overflow: hidden;
+}
+.col {
+  float: left;
+  padding: 0 15px
+}
+.col-right {
+  float: right;
+}
+.col-fourth {
+  width: 25%
+}
+.col-third {
+  width: 33.33%;
+}
+.col-half {
+  width: 50%;
+}
+.col-two-third {
+  width: 66.66%;
+}
+.col-three-fourth {
+  width: 75%
+}
+
+/* Helpers */
+.hidden {
+  display: none;
+}
+
+.vertical-padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.no-vertical-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.full-height {
+  height: 100vh;
+  padding-bottom: 60px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+.text-align-left {
+  text-align: left;
+}
+
+.vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.vertical-center-high {
+  position: relative;
+  top: 33.33%;
+  transform: translateY(-50%);
+}
+
+/* Nav Bar */
+
+nav {
+  background-color: white;
+  border-top: 1px solid;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 200;
+}
+nav li{
+  display: inline-block;
+  margin: 0 15px;
+  vertical-align: middle;
+}
+nav a{
+  -webkit-transition: border .1s ease-in-out;
+  transition: border .1s ease-in-out;
+  color: white;
+  cursor: pointer;
+  padding: 5px 15px;
+  border-bottom: 2px solid #0C304F;
+}
+nav a:hover, nav a:active {
+  border-bottom: 2px solid white;
+  color: white;
+  text-decoration: none;
+}
+
+/* Componets */
+
+/*#intro .container:before {
+  display: block;
+  width: 200px;
+  height: 145px;
+  content: " ";
+  background-image: url(/assets/images/nate-ude-logo-blue.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.05;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}*/
+
+
+.job-list {
+  margin-top: 30px;
+}
+
+.job-item {
+  float: left;
+  width: 100%;
+}
+
+.job-item p:first-child {
+  margin-top: 0;
+}
+
+.job-header {
+  text-align: right;
+  width: 30%;
+  margin-right: 2%;
+  float: left;
+}
+
+.job-title {
+  font-weight: 300;
+  font-size: 21px;
+  color: #333;
+}
+
+.job-date {
+  color: #0C304F;
+  font-weight: 100;
+  line-height: 1.5em;
+}
+
+.job-description {
+  width: 66%;
+  float: left;
+}
+
+.icon-list {
+}
+
+.icon-list li {
+  padding-bottom: 5px;
+}
+
+.icon-list li .fa {
+  vertical-align: middle;
+  font-size: 2em;
+  line-height: 1.2em;
+  padding-right: 5px;
+}
+
+.icon-list li a:hover {
+  text-decoration: none;
+}
+
+.icon-list li a:hover .label{
+  text-decoration: underline;
+}
+
+.skills-list {}
+.skills-list li {
+  display: inline-block;
+  padding: 5px;
+  margin: 0 10px;
+}
+
+.skills-list {}
+
+.project-list {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.project-item {
+  background: white;
+  display: block;
+  float: left;
+  height: 500px;
+  margin: 0 1.5%;
+  overflow:hidden;
+  position: relative;
+  width: 30.33%;
+  z-index: 100;
+}
+
+.project-image {
+  width: 100%;
+  height: 500px;
+  background: brown;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.project-content {
+  -webkit-transition: top .75s ease-in-out;
+  transition: top .75s ease-in-out;
+  background: white;
+  top: 460px;
+  display: block;
+  font-size: 0.8em;
+  height: 90%;
+  left: 0;
+  overflow: hidden;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.project-item:hover .project-content {
+  top: 180px;
+}
+
+.project-content p {
+  text-align: left;
+}
+
+.project-title {
+  border-bottom: 2px solid #F2F2F2;
+  font-size: 1.2em;
+  height: 35px;
+  margin-bottom: 15px;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+/* Specific Items */
+
+#contact {
+  padding-bottom: 120px;
+}
+
+#contact h2 {
+  margin-top: 0;
+  line-height: 1em;
+}
+
+#contact .fa {
+  color: white;
+}
+
+#contact a {
+  color: white;
+}
+
+@media (max-width: 650px){
+  .line-sm {
+    display: block;
+  }
+
+  .project-item {
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
+  .project-image {
+    height: 320px;
+  }
+  .project-content {
+    position: relative;
+    top: 0;
+  }
+  #projects .container {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 426px){
+  nav li {
+    width: 24%;
+    margin: 0;
+    font-size: 0.8em;
+  }
+
+  nav li a {
+    padding: 0;
+  }
+
+  .heading-1 {
+    line-height: 1em;
+    font-size: 3em;
+    margin-bottom: 30px;
+  }
+
+  .heading-2 {
+    font-size: 2em;
+  }
+
+  .col-half {
+    width: 100%;
+  }
+
+  #contact h2 {
+    margin: 0 0 20px;
+  }
+
+  .job-header {
+    text-align: left;
+    width: 100%;
+  }
+  .job-description {
+    width: 100%;
+  }
+}
